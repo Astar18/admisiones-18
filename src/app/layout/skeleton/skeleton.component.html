@@ -1,0 +1,114 @@
+<!-- <mat-tab-group>
+  <mat-tab label="Datos Personales">
+    <ng-template matTabContent>
+      <app-datos-personales></app-datos-personales>
+    </ng-template>
+  </mat-tab>
+
+  <mat-tab label="Datos Académicos">
+    <ng-template matTabContent>
+      <app-datos-academicos></app-datos-academicos>
+    </ng-template>
+  </mat-tab>
+
+  <mat-tab label="Datos Laborales">
+    <ng-template matTabContent>
+      <app-datos-laborales></app-datos-laborales>
+    </ng-template>
+  </mat-tab>
+
+  <mat-tab label="Datos de Investigación">
+    <ng-template matTabContent>
+      <app-datos-investigacion></app-datos-investigacion>
+    </ng-template>
+  </mat-tab>
+
+  <mat-tab label="Postulación">
+    <ng-template matTabContent>
+      <app-postulacion></app-postulacion>
+    </ng-template>
+  </mat-tab>
+
+  <mat-tab label="Pago">
+    <ng-template matTabContent>
+      <app-pago></app-pago>
+    </ng-template>
+  </mat-tab>
+
+  <mat-tab label="Seguimiento de Inscripción">
+    <ng-template matTabContent>
+      <app-seguimiento-inscripcion></app-seguimiento-inscripcion>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group> -->
+<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+  {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+</button>
+
+<mat-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Datos Personales</ng-template>
+      <app-datos-personales></app-datos-personales>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Datos Académicos</ng-template>
+      <app-datos-academicos></app-datos-academicos>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step>
+    <ng-template matStepLabel>Datos Laborales</ng-template>
+    <app-datos-laborales></app-datos-laborales>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+
+  <mat-step>
+    <ng-template matStepLabel>Datos de Investigación</ng-template>
+    <app-datos-investigacion></app-datos-investigacion>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+
+  <mat-step>
+    <ng-template matStepLabel>Postulación</ng-template>
+    <app-postulacion></app-postulacion>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+
+  <mat-step>
+    <ng-template matStepLabel>Pago</ng-template>
+    <app-pago></app-pago>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+
+  <mat-step>
+    <ng-template matStepLabel>Seguimiento de Inscripción</ng-template>
+    <app-seguimiento-inscripcion></app-seguimiento-inscripcion>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-stepper>

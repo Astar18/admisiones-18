@@ -1,0 +1,77 @@
+<mat-drawer-container class="example-container">
+  <div class="background-image"><img src="assets/images/fondEPN.jpeg" alt="prueba fondo"> </div>
+
+  <mat-drawer mode="side" opened class="drawer-content">
+    <div class="epn-logo-sii">
+      <img src="assets/images/LOGO_EPN_SII.png" alt="logo epn-sii" class="img-sii">
+    </div>
+    <br>
+
+    <mat-card-title>Iniciar sesión en el sistema<br> de <br> admisiones de posgrado de la EPN</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill">
+          <mat-label>Ingresa tu correo electrónico:</mat-label>
+          <input matInput formControlName="email" type="email">
+          <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+            Correo Electrónico requerido
+          </mat-error>
+          <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
+            Por favor ingresa un correo válido
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Ingresa tu contraseña: </mat-label>
+          <input matInput [type]="hide() ? 'password' : 'text'" formControlName="password" />
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="clickEvent($event)"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide()"
+          >
+            <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+            Contraseña requerida
+          </mat-error>
+          <mat-error *ngIf="loginForm.get('password')?.hasError('minlength')">
+            La contraseña debe tener al menos 6 caracteres
+          </mat-error>
+        </mat-form-field>
+
+        <div class="button-group">
+          <button mat-raised-button color="primary" type="submit">
+            Iniciar sesión
+          </button>
+          <button mat-raised-button color="accent" type="button" (click)="navigateToRegister()">
+            No tienes una cuenta? Regístrate
+          </button>
+          <br>
+        </div>
+      </form>
+    </mat-card-content>
+
+    <mat-toolbar>
+      <div class="footer-content">
+        <br>
+        <span>&copy; 2024 - EPN</span>
+        <br>
+        <span class="spacer"></span>
+        <br>
+        <span class="spacer"></span>
+        <a mat-button routerLink="/about">Consulte la POLÍTICA DE USO DE LA INFORMACIÓN de la EPN</a>
+        <br>
+        <a mat-button routerLink="/privacy">Manual de Usuario</a>
+        <br>
+        <br>
+        <a mat-button>Si presenta inconvenientes, solicite soporte a: <br> asistencia.tecnica&#64;epn.edu.ec</a>
+      </div>
+    </mat-toolbar>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <img src="assets/images/fondEPN.jpeg" alt="Escuela Politécnica Nacional" class="epn-logo">
+  </mat-drawer-content>
+</mat-drawer-container>
