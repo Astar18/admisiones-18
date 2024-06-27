@@ -1,1 +1,89 @@
-<p>datos-personales works!</p>
+<mat-grid-list cols="1"  class="mat-grid1">
+
+  <mat-grid-tile>
+    <label>Número de cédula o pasaporte:</label>
+    <br>
+
+    <label>Subir una copia de documentos: </label>
+    <br>
+    <label>Apellidos:</label>
+    <br>
+    <label>Fecha de Nacimiento:</label>
+    <p> (DD/MM/AAAA)</p>
+    <br>
+    <label>País de Nacimiento:</label>
+    <br>
+    <label>Cantón de Nacimiento:</label>
+    <br>
+    <label>Provincia de Domicilio:</label>
+    <br>
+    <label>Dirección de Domicilio:</label>
+    <br>
+    <label>Teléfono de Domicilio:</label>
+    <br>
+    <label>Subir carte de Presentación</label>
+    <br>
+    <label>Perfil de X <br> (opcional)</label>
+  </mat-grid-tile>
+    <br>
+
+
+
+
+
+
+
+  <mat-grid-tile>
+    <mat-form-field class="input1">
+      <mat-label>Número de Documento</mat-label>
+      <input matInput placeholder="identificacion" value="">
+    </mat-form-field>
+    <br>
+    <button mat-raised-button>Cargar archivo</button>
+    <br>
+    <mat-form-field class="input1">
+      <mat-label>Apellidos</mat-label>
+      <input matInput placeholder="apellidos" value="">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>Fecha de Nacimiento:</mat-label>
+      <input matInput [matDatepicker]="picker">
+      <mat-hint>DD/MM/AAAA</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <br>
+</mat-grid-tile>
+
+
+
+
+
+  <mat-grid-tile>
+    <label>Estado Civil:</label>
+    <br>
+    <label>Nombres:</label>
+    <br>
+    <label>Sexo:</label>
+    <br>
+    <label>Provincia de Nacimiento:</label>
+    <br>
+    <label>Etnia:</label>
+    <br>
+    <label>Cantón de Domicilio:</label>
+    <br>
+    <label>Linkedin: <br> (opcional)</label>
+    <br>
+    <label>Instagram: <br> (opcional)</label>
+
+  </mat-grid-tile>
+
+
+
+<mat-grid-list>
+  <mat-grid-tile>
+    <label>Input2:</label>
+
+  </mat-grid-tile>
+</mat-grid-list>

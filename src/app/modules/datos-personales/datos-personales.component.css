@@ -1,0 +1,35 @@
+.input1 {
+
+  max-width: 75%;
+  height: 7%;
+  gap: 5px;
+}
+
+.input2{
+
+    max-width: 75%;
+    height: 7%;
+    gap: 5px;
+}
+label{
+  gap: 5px;
+}
+.mat-grid1{
+  background-color: lightblue;
+  height: max-content;
+  width: 25%;
+
+
+
+
+}
+.mat-grid2{
+  background-color: rgb(179, 231, 196);
+  height: 100%;
+  width: 25%;
+  padding: 10px;
+  margin-left: 100px;
+  margin-top: -1000px;
+
+
+}
