@@ -1,89 +1,74 @@
-<mat-grid-list cols="1"  class="mat-grid1">
-
+<mat-grid-list cols="4" rowHeight="500px" class="mat-grid1">
+  <!-- Column 1 -->
   <mat-grid-tile>
-    <label>Número de cédula o pasaporte:</label>
-    <br>
-
-    <label>Subir una copia de documentos: </label>
-    <br>
-    <label>Apellidos:</label>
-    <br>
-    <label>Fecha de Nacimiento:</label>
-    <p> (DD/MM/AAAA)</p>
-    <br>
-    <label>País de Nacimiento:</label>
-    <br>
-    <label>Cantón de Nacimiento:</label>
-    <br>
-    <label>Provincia de Domicilio:</label>
-    <br>
-    <label>Dirección de Domicilio:</label>
-    <br>
-    <label>Teléfono de Domicilio:</label>
-    <br>
-    <label>Subir carte de Presentación</label>
-    <br>
-    <label>Perfil de X <br> (opcional)</label>
+    <div class="label-container">
+      <label>Número de cédula o pasaporte:</label>
+      <label>Subir una copia de documentos:</label>
+      <label>Apellidos:</label>
+      <label>Fecha de Nacimiento:</label>
+      <p>(DD/MM/AAAA)</p>
+      <label>País de Nacimiento:</label>
+      <label>Cantón de Nacimiento:</label>
+      <label>Provincia de Domicilio:</label>
+      <label>Dirección de Domicilio:</label>
+      <label>Teléfono de Domicilio:</label>
+      <label>Subir carta de Presentación:</label>
+      <label>Perfil de X (opcional):</label>
+    </div>
   </mat-grid-tile>
-    <br>
 
-
-
-
-
-
-
+  <!-- Column 2 -->
   <mat-grid-tile>
-    <mat-form-field class="input1">
-      <mat-label>Número de Documento</mat-label>
-      <input matInput placeholder="identificacion" value="">
-    </mat-form-field>
-    <br>
-    <button mat-raised-button>Cargar archivo</button>
-    <br>
-    <mat-form-field class="input1">
-      <mat-label>Apellidos</mat-label>
-      <input matInput placeholder="apellidos" value="">
-    </mat-form-field>
-    <br>
+    <div class="input-container">
+      <mat-form-field class="input1">
+        <mat-label>Número de Documento</mat-label>
+        <input matInput placeholder="Identificación">
+      </mat-form-field>
+      <button mat-raised-button color="primary">Cargar archivo</button>
+      <mat-form-field class="input1">
+        <mat-label>Apellidos</mat-label>
+        <input matInput placeholder="Apellidos">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Fecha de Nacimiento</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-hint>DD/MM/AAAA</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+  </mat-grid-tile>
+
+  <!-- Column 3 -->
+  <mat-grid-tile>
+    <div class="label-container">
+      <mat-label>Estado Civil:</mat-label>
+      <label>Nombres:</label>
+      <label>Sexo:</label>
+      <label>Provincia de Nacimiento:</label>
+      <label>Etnia:</label>
+      <label>Cantón de Domicilio:</label>
+      <label>Linkedin (opcional):</label>
+      <label>Instagram (opcional):</label>
+    </div>
+  </mat-grid-tile>
+
+  <!-- Column 4 -->
+  <mat-grid-tile>
+
+
     <mat-form-field>
-      <mat-label>Fecha de Nacimiento:</mat-label>
-      <input matInput [matDatepicker]="picker">
-      <mat-hint>DD/MM/AAAA</mat-hint>
-      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
+      <mat-label>Estado Civil</mat-label>
+      <mat-select>
+        <mat-option value="one">Soltero</mat-option>
+        <mat-option value="two">Casado</mat-option>
+        <mat-option value="three">Divorciado</mat-option>
+        <mat-option value="four">Viudo</mat-option>
+
+      </mat-select>
     </mat-form-field>
-    <br>
-</mat-grid-tile>
 
-
-
-
-
-  <mat-grid-tile>
-    <label>Estado Civil:</label>
-    <br>
-    <label>Nombres:</label>
-    <br>
-    <label>Sexo:</label>
-    <br>
-    <label>Provincia de Nacimiento:</label>
-    <br>
-    <label>Etnia:</label>
-    <br>
-    <label>Cantón de Domicilio:</label>
-    <br>
-    <label>Linkedin: <br> (opcional)</label>
-    <br>
-    <label>Instagram: <br> (opcional)</label>
 
   </mat-grid-tile>
 
-
-
-<mat-grid-list>
-  <mat-grid-tile>
-    <label>Input2:</label>
-
-  </mat-grid-tile>
 </mat-grid-list>
