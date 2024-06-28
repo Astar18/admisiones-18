@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,signal,ChangeDetectionStrategy } from '@angular/core';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatInputModule} from '@angular/material/input';
@@ -24,6 +24,7 @@ export interface Tile {
   imports: [MatGridListModule,MatButtonToggleModule,MatInputModule,MatFormFieldModule,FormsModule,MatIconModule,MatDividerModule,MatButtonModule,MatDatepickerModule,MatSelectModule],
   templateUrl: './datos-personales.component.html',
   styleUrl: './datos-personales.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [provideNativeDateAdapter()]
 })
 export class DatosPersonalesComponent {
@@ -34,4 +35,9 @@ export class DatosPersonalesComponent {
     {text: 'Four', cols: 1, rows: 4, color: ''},
 
   ];
+  protected readonly value = signal('');
+
+  protected onInput(event: Event) {
+    this.value.set((event.target as HTMLInputElement).value);
+  }
 }
