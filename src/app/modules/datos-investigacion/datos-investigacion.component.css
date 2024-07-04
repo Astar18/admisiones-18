@@ -1,0 +1,26 @@
+.mat-mdc-radio-button ~ .mat-mdc-radio-button {
+  align-items: center;
+
+}
+.titul-principal{
+  font-size: 18px;
+
+  color: #000000de;
+  border-radius: 4px;
+}
+
+/* Cambiar el color del texto de los botones de radio */
+.mat-radio-button .mat-radio-label-content {
+  color: #ffffff; /* Color blanco para el texto */
+}
+
+/* Cambiar el color del círculo exterior del botón de radio seleccionado */
+.mat-radio-button.mat-radio-checked .mat-radio-outer-circle {
+  background-color: #ffffff; /* Color blanco para el fondo */
+  border-color: #ffffff; /* Color blanco para el borde */
+}
+
+/* Cambiar el color del círculo interior del botón de radio seleccionado */
+.mat-radio-button.mat-radio-checked .mat-radio-inner-circle {
+  background-color: #3f51b5; /* Color de fondo personalizado para el botón seleccionado */
+}

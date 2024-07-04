@@ -1,8 +1,14 @@
-<!-- <mat-tab-group>
-  <mat-tab label="Datos Personales">
-    <ng-template matTabContent>
-      <app-datos-personales></app-datos-personales>
+
+<mat-tab-group>
+
+  <mat-tab >
+    <ng-template mat-tab-label>
+      <mat-icon ><span class="material-symbols-outlined">
+        counter_1
+        </span></mat-icon>
+       Datos Personales
     </ng-template>
+    <app-datos-personales></app-datos-personales>
   </mat-tab>
 
   <mat-tab label="Datos Académicos">
@@ -40,11 +46,13 @@
       <app-seguimiento-inscripcion></app-seguimiento-inscripcion>
     </ng-template>
   </mat-tab>
-</mat-tab-group> -->
-<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
-  {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
-</button>
 
+</mat-tab-group>
+
+<!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+  {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+</button> -->
+<!--
 <mat-stepper [linear]="isLinear" #stepper>
   <mat-step [stepControl]="firstFormGroup">
     <form [formGroup]="firstFormGroup">
@@ -111,4 +119,4 @@
       <button mat-button (click)="stepper.reset()">Reset</button>
     </div>
   </mat-step>
-</mat-stepper>
+</mat-stepper> -->

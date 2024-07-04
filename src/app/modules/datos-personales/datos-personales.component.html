@@ -1,153 +1,200 @@
-<mat-grid-list cols="2" rowHeight="800px" class="mat-grid1">
-  <!-- Column 1 -->
-  <mat-grid-tile>
-    <div class="form-container">
-      <div class="form-group">
-        <label>Número de cédula o pasaporte:</label>
-        <mat-form-field class="input1">
-          <input matInput placeholder="Identificación">
-        </mat-form-field>
+<div class="container">
+  <div class="row">
+
+    <!-- Primer bloque -->
+
+    <div class="col-md-12 mb-2">
+
+      <div class="row justify-content-center">
+
+        <div class="col-md-2 mb-4">
+          <div class="form-container">
+            <div class="form-group text-center">
+              <mat-card class="example-card" appearance="outlined">
+                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+                <mat-card-actions>
+                  <button mat-button>Cargar Foto</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+          <div class="form-container">
+            <div class="form-group text-center">
+
+
+              <br>
+              <mat-radio-group aria-label="Seleccionar" class="input1">
+                <mat-radio-button value="cedula">Cédula</mat-radio-button>
+
+                <mat-radio-button value="pasaporte">Pasaporte</mat-radio-button>
+                <br>
+                <mat-form-field class="input1">
+                  <input matInput placeholder="Cédula">
+                </mat-form-field>
+              </mat-radio-group>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-5 mb-4">
+          <div class="form-container text-center">
+            <div class="form-group">
+              <label>Subir carta de Presentación:</label>
+              <br>
+              <button mat-raised-button color="primary">Cargar archivo</button>
+            </div>
+            <div class="form-group mt-3">
+              <mat-label>Subir documentos:</mat-label>
+              <br>
+              <button mat-raised-button color="primary">Cargar archivo</button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="form-group">
-        <label>Subir una copia de documentos:</label>
-        <button mat-raised-button color="primary">Cargar archivo</button>
-      </div>
+      <div class="row">
 
-      <div class="form-group">
-        <label>Apellidos:</label>
-        <mat-form-field class="input1">
-          <input matInput placeholder="Apellidos">
-        </mat-form-field>
-      </div>
-
-      <div class="form-group">
-        <label>Fecha de Nacimiento: (DD/MM/AAAA)</label>
-        <mat-form-field>
-          <input matInput [matDatepicker]="picker">
-          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-          <mat-datepicker #picker></mat-datepicker>
-        </mat-form-field>
-      </div>
-
-      <div class="form-group">
-        <label>País de Nacimiento:</label>
-        <mat-form-field class="input1">
-          <input matInput placeholder="País de Nacimiento">
-        </mat-form-field>
-      </div>
-
-      <div class="form-group">
-        <label>Cantón de Nacimiento:</label>
-        <mat-form-field class="input1">
-          <input matInput placeholder="Cantón de Nacimiento">
-        </mat-form-field>
-      </div>
-
-      <div class="form-group">
-        <label>Provincia de Domicilio:</label>
-        <mat-form-field class="input1">
-          <input matInput placeholder="Provincia de Domicilio">
-        </mat-form-field>
-      </div>
-
-      <div class="form-group">
-        <label>Dirección de Domicilio:</label>
-        <mat-form-field class="input1">
-          <input matInput placeholder="Dirección de Domicilio">
-        </mat-form-field>
-      </div>
-
-      <div class="form-group">
-        <label>Teléfono de Domicilio:</label>
-        <mat-form-field class="input1">
-          <input matInput placeholder="Teléfono de Domicilio">
-        </mat-form-field>
-      </div>
-
-      <div class="form-group">
-        <label>Subir carta de Presentación:</label>
-        <button mat-raised-button color="primary">Cargar archivo</button>
-      </div>
-
-      <div class="form-group">
-        <label>Perfil de X (opcional):</label>
-        <mat-form-field class="input1">
-          <input matInput placeholder="Perfil de X">
-        </mat-form-field>
+        <div class="col-md-3 mb-3">
+          <div class="form-container">
+            <div class="form-group">
+              <mat-form-field>
+                <input matInput placeholder="Nombres">
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <div class="form-container">
+            <div class="form-group">
+              <mat-form-field>
+                <input matInput placeholder="Apellidos">
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <div class="form-container">
+            <div class="form-group">
+              <mat-form-field>
+                <mat-select placeholder="Sexo">
+                  <mat-option value="SexoM">Masculino</mat-option>
+                  <mat-option value="SexoF">Femenino</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <div class="form-container">
+            <div class="form-group">
+              <mat-form-field>
+                <input matInput [matDatepicker]="picker" placeholder="Fecha de Nacimiento">
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </mat-grid-tile>
+    <!-- Fin del primer bloque -->
 
-  <!-- Column 2 -->
-  <mat-grid-tile>
-    <div class="form-container">
-      <div class="form-group">
-        <label>Estado Civil:</label>
-        <mat-form-field>
-          <mat-select>
-            <mat-option value="EstSoltero">Soltero</mat-option>
-            <mat-option value="EstCasado">Casado</mat-option>
-            <mat-option value="EstDivorciado">Divorciado</mat-option>
-            <mat-option value="EstViudo">Viudo</mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-
-      <div class="form-group">
-        <label>Nombres:</label>
-        <mat-form-field>
-          <input matInput placeholder="Nombres">
-        </mat-form-field>
-      </div>
-
-      <div class="form-group">
-        <label>Sexo:</label>
-        <mat-form-field>
-          <mat-select>
-            <mat-option value="SexoM">Masculino</mat-option>
-            <mat-option value="SexoF">Femenino</mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-
-      <div class="form-group">
-        <label>Provincia de Nacimiento:</label>
-        <mat-form-field>
-          <input matInput placeholder="Provincia de Nacimiento">
-        </mat-form-field>
-      </div>
-
-      <div class="form-group">
-        <label>Etnia:</label>
-        <mat-form-field>
-          <mat-select>
-            <mat-option value="EtnMestizo">Mestizo</mat-option>
-            <mat-option value="EtnMulato">Mulato</mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-
-      <div class="form-group">
-        <label>Cantón de Domicilio:</label>
-        <mat-form-field class="input1">
-          <input matInput placeholder="Cantón de Domicilio">
-        </mat-form-field>
-      </div>
-
-      <div class="form-group">
-        <label>Linkedin (opcional):</label>
-        <mat-form-field class="input1">
-          <input matInput placeholder="Linkedin">
-        </mat-form-field>
-      </div>
-
-      <div class="form-group">
-        <label>Instagram (opcional):</label>
-        <mat-form-field class="input1">
-          <input matInput placeholder="Instagram">
-        </mat-form-field>
-      </div>
+    <!-- Segundo bloque -->
+<div class="col-md-12 mb-3">
+  <div class="row">
+    <div class="col-md-3 mb-3">
+      <mat-form-field class="input1">
+        <input matInput placeholder="País de Nacimiento">
+      </mat-form-field>
     </div>
-  </mat-grid-tile>
-</mat-grid-list>
+    <div class="col-md-3 mb-3">
+      <mat-form-field class="input1">
+        <input matInput placeholder="Provincia de Nacimiento">
+      </mat-form-field>
+    </div>
+    <div class="col-md-3 mb-3">
+      <mat-form-field class="input1">
+        <input matInput placeholder="Cantón de Nacimiento">
+      </mat-form-field>
+    </div>
+
+    <div class="col-md-3 mb-3">
+
+        <mat-form-field class="input1">
+          <textarea matInput placeholder="Dirección de Domicilio"></textarea>
+        </mat-form-field>
+
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 mb-3">
+      <mat-form-field class="input1">
+        <input matInput placeholder="Provincia de Domicilio">
+      </mat-form-field>
+    </div>
+    <div class="col-md-3 mb-3">
+      <mat-form-field class="input1">
+        <mat-select placeholder="Estado Civil">
+          <mat-option value="EstSoltero">Soltero</mat-option>
+          <mat-option value="EstCasado">Casado</mat-option>
+          <mat-option value="EstDivorciado">Divorciado</mat-option>
+          <mat-option value="EstViudo">Viudo</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="col-md-3 mb-3">
+      <mat-form-field class="input1">
+        <mat-select placeholder="Etnia">
+          <mat-option value="EtnMestizo">Mestizo</mat-option>
+          <mat-option value="EtnMulato">Mulato</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-md-3 mb-3">
+      <mat-form-field class="input1">
+        <input matInput placeholder="Telefono de Domicilio">
+      </mat-form-field>
+
+    </div>
+  </div>
+
+
+  <div class="row">
+
+    <div class="col-md-3 mb-3">
+      <mat-form-field class="input1">
+        <input matInput placeholder="Cantón de Domicilio">
+      </mat-form-field>
+    </div>
+    <div class="col-md-3 mb-3">
+      <mat-form-field class="input1">
+        <input matInput placeholder="Linkedin">
+        <mat-hint>(opcional)</mat-hint>
+      </mat-form-field>
+    </div>
+    <div class="col-md-3 mb-3">
+      <mat-form-field class="input1">
+        <input matInput placeholder="Instagram">
+        <mat-hint>(opcional)</mat-hint>
+      </mat-form-field>
+    </div>
+    <div class="col-md-3 mb-3">
+      <mat-form-field class="input1">
+        <input matInput placeholder="Perfil de X">
+        <mat-hint>(opcional)</mat-hint>
+      </mat-form-field>
+    </div>
+
+  </div>
+</div>
+<!-- Fin del segundo bloque -->
+
+
+  </div>
+</div>

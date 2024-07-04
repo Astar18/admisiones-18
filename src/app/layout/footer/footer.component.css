@@ -1,15 +1,16 @@
-.mat-toolbar {
+.mat-toolbar.footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-}
-
-.footer-content {
+  height: fit-content;
+  padding: 5px 0px; /* Asegúrate de que el footer tenga algo de espacio interno */
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap; /* Permitir que el contenido se envuelva */
+  gap: 2px; /* Espacio entre elementos */
 }
 
-.spacer {
-  flex: 1 1 auto;
+.footer-text {
+  font-size: 18px; /* Ajusta el tamaño de la fuente para que coincida con los botones */
 }
+

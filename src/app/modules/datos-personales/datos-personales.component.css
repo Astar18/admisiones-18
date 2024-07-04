@@ -1,23 +1,36 @@
 .mat-grid1 {
   width: 100%;
-  padding: 20px;
-}
 
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+}
+.example-card {
+  max-width: 150px;
+}
 .form-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 5px;
+  padding:10px;
+
 }
 
 .form-group {
   display: flex;
-  align-items: center;
-  gap: 10px;
+
+  gap: 5px;
   width: 100%;
+
+}
+
+mat-grid-tile {
+  background-color: rgba(228, 228, 228, 0.664);
 }
 
 .form-group label {
-  min-width: 180px; /* Ajusta este valor según sea necesario */
+  min-width: 180px;
 }
 
 mat-form-field {
@@ -26,23 +39,48 @@ mat-form-field {
 
 button {
   align-self: flex-start;
+
 }
 
 @media (max-width: 768px) {
-  .mat-grid1 {
-    grid-template-columns: 1fr !important;
-  }
-
   .form-container {
     padding: 10px;
-  }
-
-  .form-group {
-    flex-direction: column;
-    align-items: flex-start;
   }
 
   .form-group label {
     min-width: auto;
   }
 }
+
+.input1 {
+  width: 100%;
+  margin: 5px 0;
+}
+
+.input1 .mat-form-field-infix {
+  padding: 0 5px;
+}
+
+.input1 .mat-form-field-wrapper {
+  padding-bottom: 0;
+}
+
+.input1 .mat-form-field-underline {
+  height: 1px;
+}
+
+.input1 .mat-form-field-underline .mat-form-field-ripple {
+  height: 1px;
+}
+
+.input1 .mat-form-field-label {
+  font-size: 12px;
+  transform: translateY(-1.3em);
+}
+
+.input1 .mat-input-element {
+  height: 5px;
+  font-size: 14px;
+  padding: 0 5px;
+}
+

@@ -10,8 +10,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {provideNativeDateAdapter} from '@angular/material/core';
 import {MatSelectModule}from '@angular/material/select';
+import {MatRadioModule} from '@angular/material/radio';
 
-
+import {MatCardModule} from '@angular/material/card'
 export interface Tile {
   color: string;
   cols: number;
@@ -21,7 +22,10 @@ export interface Tile {
 @Component({
   selector: 'app-datos-personales',
   standalone: true,
-  imports: [MatGridListModule,MatButtonToggleModule,MatInputModule,MatFormFieldModule,FormsModule,MatIconModule,MatDividerModule,MatButtonModule,MatDatepickerModule,MatSelectModule],
+  imports: [MatGridListModule,
+    MatButtonToggleModule,MatInputModule,MatFormFieldModule,FormsModule,
+    MatIconModule,MatDividerModule,MatButtonModule,MatDatepickerModule,
+    MatSelectModule,MatRadioModule,MatCardModule],
   templateUrl: './datos-personales.component.html',
   styleUrl: './datos-personales.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

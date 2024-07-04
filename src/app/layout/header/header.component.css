@@ -1,8 +1,31 @@
 .mat-toolbar {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto; /* Dos columnas: una que ocupe el espacio restante y otra para el botón */
+  align-items: center; /* Centra verticalmente los elementos */
 }
 
-.spacer {
-  flex: 1 1 auto;
+.toolbar-content {
+  grid-column: 1 / span 2; /* Ocupa ambas columnas */
+}
+
+.header-title {
+  font-size: 18px; /* Tamaño de fuente para el título */
+}
+
+@media (max-width: 768px) {
+  .mat-toolbar {
+    grid-template-columns: 1fr; /* Una columna en dispositivos pequeños */
+  }
+
+  .toolbar-content {
+    grid-column: auto; /* Restablece el ancho automático en dispositivos pequeños */
+    text-align: center; /* Centra el contenido en pantallas pequeñas */
+    margin-bottom: 10px; /* Espacio adicional entre elementos en pantallas pequeñas */
+  }
+}
+
+@media (min-width: 768px) {
+  .header-title {
+    font-size: 16px; /* Reducir el tamaño de fuente en dispositivos medianos */
+  }
 }

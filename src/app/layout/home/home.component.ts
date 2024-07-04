@@ -4,6 +4,7 @@ import { SkeletonComponent } from '../skeleton/skeleton.component';
 import { FooterComponent } from '../footer/footer.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { MatToolbar } from '@angular/material/toolbar';
 
 export interface Tile {
   color: string;
@@ -15,7 +16,7 @@ export interface Tile {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent,SkeletonComponent,FooterComponent,MatSidenavModule,MatGridListModule],
+  imports: [HeaderComponent,SkeletonComponent,FooterComponent,MatSidenavModule,MatGridListModule,MatToolbar],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

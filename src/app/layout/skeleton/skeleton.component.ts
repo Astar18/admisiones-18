@@ -12,7 +12,7 @@ import { DatosInvestigacionComponent } from '../../modules/datos-investigacion/d
 import { PostulacionComponent } from '../../modules/postulacion/postulacion.component';
 import { PagoComponent } from '../../modules/pagos/pago/pago.component';
 import { SeguimientoInscripcionComponent } from '../../modules/seguimiento-inscripcion/seguimiento-inscripcion.component';
-
+import {MatIconModule} from '@angular/material/icon';
 @Component({
   selector: 'app-skeleton',
   standalone: true,
@@ -29,6 +29,7 @@ import { SeguimientoInscripcionComponent } from '../../modules/seguimiento-inscr
     MatStepperModule,
     FormsModule,
     ReactiveFormsModule,
+    MatIconModule,
     MatFormFieldModule,
     MatInputModule,
   ],

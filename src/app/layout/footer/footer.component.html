@@ -1,10 +1,16 @@
-<mat-toolbar color="primary" class="mat-elevation-z2">
-  <div class="footer-content">
-    <span>Derechos de autor &copy; 2024 - Escuela Politécnica Nacional</span>
-    <span class="spacer"></span>
-    <span>Contacto: contactoepn.edu.ec</span>
-    <span class="spacer"></span>
-    <a mat-button routerLink="/about">Acerca de</a>
-    <a mat-button routerLink="/privacy">Política de Privacidad</a>
+<mat-toolbar color="primary" class="mat-elevation-z2 footer">
+  <div class="container">
+    <div class="row text-center w-100">
+      <div class="col-12 col-md-3 d-flex justify-content-center align-items-center mb-2 mb-md-0">
+        <span class="footer-text">Contacto: contacto&#64;epn.edu.ec</span>
+      </div>
+      <div class="col-12 col-md-6 d-flex justify-content-center align-items-center mb-2 mb-md-0">
+        <span class="footer-text">Derechos de autor &copy; 2024 - Escuela Politécnica Nacional</span>
+      </div>
+      <div class="col-12 col-md-3 d-flex justify-content-center align-items-center mb-2 mb-md-0">
+        <a mat-button routerLink="/about" class="footer-link"><span class="footer-text">Acerca de</span></a>
+        <a mat-button routerLink="/privacy" class="footer-link"><span class="footer-text">Política de Privacidad</span></a>
+      </div>
+    </div>
   </div>
 </mat-toolbar>
