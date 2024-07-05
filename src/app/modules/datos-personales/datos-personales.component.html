@@ -1,100 +1,109 @@
+<div class="card">
+  <div class="card-header" style="background: #0d3c61; padding: 10px;">
+    <div style="display: flex; align-items: center; justify-content: center;">
+      <span class="card-title" style="color: #ffffff; margin-bottom: 0px;">Ingreso Información Personal</span>
+    </div>
+  </div>
+
+
 <div class="container">
   <div class="row">
 
     <!-- Primer bloque -->
-
-    <div class="col-md-12 mb-2">
-
+    <div class="col-md-12 mb-3">
       <div class="row justify-content-center">
-
-        <div class="col-md-2 mb-4">
-          <div class="form-container">
+        <div class="col-md-2 mb-3">
+          <div class="form-container justify-content-center">
             <div class="form-group text-center">
               <mat-card class="example-card" appearance="outlined">
-                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-                <mat-card-actions>
-                  <button mat-button>Cargar Foto</button>
-                </mat-card-actions>
+                <img mat-card-image src="assets/images/circleLogin.png" alt="Foto login">
+                <div class="d-grid">
+
+                    <button mat-button class="btn btn-secondary "><span class="material-symbols-outlined">upload</span></button>
+
+                </div>
               </mat-card>
             </div>
+
           </div>
         </div>
 
-        <div class="col-md-3 mb-4">
+        <div class="col-md-3 mb-4 spaced-button2">
           <div class="form-container">
             <div class="form-group text-center">
 
 
               <br>
-              <mat-radio-group aria-label="Seleccionar" class="input1">
+              <mat-radio-group aria-label="Seleccionar" class="input1 ">
                 <mat-radio-button value="cedula">Cédula</mat-radio-button>
-
                 <mat-radio-button value="pasaporte">Pasaporte</mat-radio-button>
                 <br>
-                <mat-form-field class="input1">
-                  <input matInput placeholder="Cédula">
-                </mat-form-field>
+                  <input type="text" class="form-control input1" placeholder="Número de registro">
               </mat-radio-group>
             </div>
           </div>
         </div>
 
-        <div class="col-md-5 mb-4">
-          <div class="form-container text-center">
-            <div class="form-group">
-              <label>Subir carta de Presentación:</label>
-              <br>
-              <button mat-raised-button color="primary">Cargar archivo</button>
-            </div>
-            <div class="form-group mt-3">
-              <mat-label>Subir documentos:</mat-label>
-              <br>
-              <button mat-raised-button color="primary">Cargar archivo</button>
-            </div>
+        <div class="col-md-3 mb-4 spaced-button">
+          <div class="form-container text-center ">
+
+              <label>Subir documentos:</label>
+              <mat-card>
+              <div class="d-grid">
+                <button class="btn btn-secondary ">
+                  <span class="material-symbols-outlined">upload_file</span>
+                </button>
+              </div>
+            </mat-card>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4 spaced-button">
+          <div class="form-container text-center ">
+              <label>Subir carta de presentación:</label>
+              <div class="d-grid">
+                <button class="btn btn-secondary ">
+                  <span class="material-symbols-outlined">upload_file</span>
+                </button>
+              </div>
+
           </div>
         </div>
       </div>
-
+    </div>
       <div class="row">
 
         <div class="col-md-3 mb-3">
           <div class="form-container">
             <div class="form-group">
-              <mat-form-field>
-                <input matInput placeholder="Nombres">
-              </mat-form-field>
+              <input type="text" class="form-control input1" placeholder="Nombres">
             </div>
           </div>
         </div>
         <div class="col-md-3 mb-3">
           <div class="form-container">
             <div class="form-group">
-              <mat-form-field>
-                <input matInput placeholder="Apellidos">
-              </mat-form-field>
+              <input type="text" class="form-control input1" placeholder="Apellidos">
             </div>
           </div>
         </div>
         <div class="col-md-3 mb-3">
           <div class="form-container">
             <div class="form-group">
-              <mat-form-field>
-                <mat-select placeholder="Sexo">
-                  <mat-option value="SexoM">Masculino</mat-option>
-                  <mat-option value="SexoF">Femenino</mat-option>
-                </mat-select>
-              </mat-form-field>
+              <select id="sexo" class="form-control input1" style="color: #868c91be;">
+                <option value="" style="color: #868c91be;" disabled selected>Sexo</option>
+                <option value="SexoM">Masculino</option>
+                <option value="SexoF">Femenino</option>
+              </select>
             </div>
           </div>
         </div>
         <div class="col-md-3 mb-3">
           <div class="form-container">
             <div class="form-group">
-              <mat-form-field>
-                <input matInput [matDatepicker]="picker" placeholder="Fecha de Nacimiento">
+                <input matInput [matDatepicker]="picker" type="datetime" class="form-control input1" placeholder="Fecha de Nacimiento">
                 <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
-              </mat-form-field>
+
             </div>
           </div>
         </div>
@@ -106,26 +115,18 @@
 <div class="col-md-12 mb-3">
   <div class="row">
     <div class="col-md-3 mb-3">
-      <mat-form-field class="input1">
-        <input matInput placeholder="País de Nacimiento">
-      </mat-form-field>
+      <input type="text" class="form-control input1" placeholder="País de Nacimiento">
     </div>
     <div class="col-md-3 mb-3">
-      <mat-form-field class="input1">
-        <input matInput placeholder="Provincia de Nacimiento">
-      </mat-form-field>
+      <input type="text" class="form-control input1" placeholder="Provincia de Nacimiento">
     </div>
     <div class="col-md-3 mb-3">
-      <mat-form-field class="input1">
-        <input matInput placeholder="Cantón de Nacimiento">
-      </mat-form-field>
+      <input type="text" class="form-control input1" placeholder="Cantón de Nacimiento">
     </div>
 
     <div class="col-md-3 mb-3">
 
-        <mat-form-field class="input1">
-          <textarea matInput placeholder="Dirección de Domicilio"></textarea>
-        </mat-form-field>
+      <input type="text" class="form-control input1" placeholder="Dirección de Domicilio">
 
 
     </div>
@@ -133,33 +134,29 @@
 
   <div class="row">
     <div class="col-md-3 mb-3">
-      <mat-form-field class="input1">
-        <input matInput placeholder="Provincia de Domicilio">
-      </mat-form-field>
+      <input type="text" class="form-control input1" placeholder="Provincia de Domicilio">
     </div>
     <div class="col-md-3 mb-3">
-      <mat-form-field class="input1">
-        <mat-select placeholder="Estado Civil">
-          <mat-option value="EstSoltero">Soltero</mat-option>
-          <mat-option value="EstCasado">Casado</mat-option>
-          <mat-option value="EstDivorciado">Divorciado</mat-option>
-          <mat-option value="EstViudo">Viudo</mat-option>
-        </mat-select>
-      </mat-form-field>
+
+      <select id="estCivil" class="form-control input1" style="color: #868c91be;" >
+        <option value="" disabled selected >Estado Civil</option>
+        <option value="EstSoltero"  >Soltero</option>
+        <option value="EstCasado" style="color: #000000be;" >Casado</option>
+        <option value="EstDivorciado">Divorciado</option>
+        <option value="EstViudo">Viudo</option>
+      </select>
     </div>
 
     <div class="col-md-3 mb-3">
-      <mat-form-field class="input1">
-        <mat-select placeholder="Etnia">
-          <mat-option value="EtnMestizo">Mestizo</mat-option>
-          <mat-option value="EtnMulato">Mulato</mat-option>
-        </mat-select>
-      </mat-form-field>
+
+      <select id="etnia" class="form-control input1" style="color: #868c91be;" >
+        <option value="" disabled selected >Etnia</option>
+        <option value="EtnMestizo"  >Mestizo</option>
+        <option value="EtnMulato">Mulato</option>
+      </select>
     </div>
     <div class="col-md-3 mb-3">
-      <mat-form-field class="input1">
-        <input matInput placeholder="Telefono de Domicilio">
-      </mat-form-field>
+      <input type="text" class="form-control input1" placeholder="Telefono de Domicilio">
 
     </div>
   </div>
@@ -167,29 +164,31 @@
 
   <div class="row">
 
-    <div class="col-md-3 mb-3">
-      <mat-form-field class="input1">
-        <input matInput placeholder="Cantón de Domicilio">
-      </mat-form-field>
+    <div class="col-md-6 mb-3">
+      <input type="text" class="form-control input1" placeholder="Cantón de Domicilio">
     </div>
-    <div class="col-md-3 mb-3">
-      <mat-form-field class="input1">
-        <input matInput placeholder="Linkedin">
-        <mat-hint>(opcional)</mat-hint>
-      </mat-form-field>
+
+    <div class="col-md-6 mb-3">
+      <input type="text" class="form-control input1" placeholder="Telefono Celular">
     </div>
-    <div class="col-md-3 mb-3">
-      <mat-form-field class="input1">
-        <input matInput placeholder="Instagram">
-        <mat-hint>(opcional)</mat-hint>
-      </mat-form-field>
+
+
+  <div class="row">
+    <div class="col-md-4 mb-3">
+      <input type="text" class="form-control input1" placeholder="Linkedin">
+        <mat-hint style="color: #868c91be;">(opcional)</mat-hint>
+
     </div>
-    <div class="col-md-3 mb-3">
-      <mat-form-field class="input1">
-        <input matInput placeholder="Perfil de X">
-        <mat-hint>(opcional)</mat-hint>
-      </mat-form-field>
+    <div class="col-md-4 mb-3">
+      <input type="text" class="form-control input1" placeholder="Instagram">
+        <mat-hint style="color: #868c91be;">(opcional)</mat-hint>
+
     </div>
+    <div class="col-md-4 mb-3">
+      <input type="text" class="form-control input1" placeholder="Perfil de X">
+        <mat-hint style="color: #868c91be;">(opcional)</mat-hint>
+    </div>
+  <div>
 
   </div>
 </div>
@@ -198,3 +197,4 @@
 
   </div>
 </div>
+  </div>

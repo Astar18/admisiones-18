@@ -55,6 +55,7 @@ button {
 .input1 {
   width: 100%;
   margin: 5px 0;
+
 }
 
 .input1 .mat-form-field-infix {
@@ -84,3 +85,12 @@ button {
   padding: 0 5px;
 }
 
+
+.spaced-button {
+  margin-top: 40px;
+
+}
+.spaced-button2 {
+  margin-top: 30px;
+
+}

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 export interface Tile {
   color: string;
   cols: number;
@@ -12,7 +14,7 @@ export interface Tile {
 @Component({
   selector: 'app-datos-academicos',
   standalone: true,
-  imports: [MatGridListModule,MatButtonToggleModule],
+  imports: [MatGridListModule,MatButtonToggleModule,MatButtonModule,MatIconModule],
   templateUrl: './datos-academicos.component.html',
   styleUrl: './datos-academicos.component.css'
 })

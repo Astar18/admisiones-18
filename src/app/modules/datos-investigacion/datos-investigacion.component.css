@@ -24,3 +24,13 @@
 .mat-radio-button.mat-radio-checked .mat-radio-inner-circle {
   background-color: #3f51b5; /* Color de fondo personalizado para el botón seleccionado */
 }
+@media (max-width: 768px) {
+  .dt-buttons {
+      left: 0; /* Resetea el desplazamiento a la izquierda en pantallas pequeñas */
+      justify-content: center; /* Centra el botón en pantallas pequeñas */
+  }
+
+  .btn span.d-none.d-sm-inline-block {
+      display: inline-block !important;
+  }
+}
