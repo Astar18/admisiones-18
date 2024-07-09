@@ -1,11 +1,17 @@
 
 <mat-tab-group>
 
+  <mat-tab label="Postulación">
+    <ng-template matTabContent>
+      <app-postulacion></app-postulacion>
+    </ng-template>
+  </mat-tab>
+
   <mat-tab >
     <ng-template mat-tab-label>
-      <mat-icon ><span class="material-symbols-outlined">
+      <!-- <mat-icon ><span class="material-symbols-outlined">
         counter_1
-        </span></mat-icon>
+        </span></mat-icon> -->
        Datos Personales
     </ng-template>
     <app-datos-personales></app-datos-personales>
@@ -26,12 +32,6 @@
   <mat-tab label="Datos de Investigación">
     <ng-template matTabContent>
       <app-datos-investigacion></app-datos-investigacion>
-    </ng-template>
-  </mat-tab>
-
-  <mat-tab label="Postulación">
-    <ng-template matTabContent>
-      <app-postulacion></app-postulacion>
     </ng-template>
   </mat-tab>
 

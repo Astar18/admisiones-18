@@ -1,1 +1,59 @@
-<p>pago-info works!</p>
+<div class="card">
+  <div class="card-header text-white p-2" style="background: #0d3c61; padding: 10px;">
+    <div class="d-flex align-items-center justify-content-center">
+      <h5 class="card-title mb-0" style="color: #ffffff; margin-bottom: 0px;">Postulaciones</h5>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="container-fluid mt-4">
+      <div class="row mb-3">
+        <div class="col-md-6 mb-3">
+          <label>Seleccione la Maestría:</label>
+          <input type="text" class="form-control" placeholder="Maestría">
+        </div>
+        <div class="col-md-6 mb-3">
+          <label>Periodo:</label>
+          <input type="text" class="form-control" placeholder="Periodo">
+        </div>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Maestría</th>
+            <th>Descripción</th>
+            <th>Valor a Pagar</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <span class="fw-medium">Maestría en CiberSeguridad</span>
+            </td>
+            <td>métodos, técnicas, procedimientos y herramientas que se implementan para proteger la información que se genera y procesa a través de computadoras, servidores, dispositivos móviles, redes y sistemas electrónicos; mediante el análisis, y la investigación de los aspectos teóricos</td>
+            <td>$ 6080.50</td>
+            <td>Inactivo</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card mt-4">
+      <div class="card-body">
+        <h6>Métodos de Pago</h6>
+        <ul>
+          <li>El pago del derecho de admisión y evaluación puede realizarlo de las siguientes maneras:</li>
+          <li>
+            <span>Pago en linea Tarjetas de Crédito o Debito</span><br>
+            <app-pago-tarjeta></app-pago-tarjeta></li>
+            <li>
+              <span>Transferencia Bancaria</span><br>
+              <app-pago-transferencia></app-pago-transferencia>
+
+            </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

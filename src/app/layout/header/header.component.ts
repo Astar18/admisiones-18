@@ -1,7 +1,7 @@
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,5 +12,9 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  constructor(private router:Router) { }
+  navigateToLogin(){
+    this.router.navigate(['/login']);
+  }
 
 }

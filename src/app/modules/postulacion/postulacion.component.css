@@ -1,0 +1,9 @@
+.example-header-image {
+  width: 50px; /* Ajusta el tamaño de la imagen del encabezado según sea necesario */
+  height: 50px; /* Ajusta el tamaño de la imagen del encabezado según sea necesario */
+  background-image: url('/assets/images/sistemasLogo.jpg');
+  background-size: cover;
+  background-position: left;
+  border-radius: 15px;
+  margin-right: 4px;
+}

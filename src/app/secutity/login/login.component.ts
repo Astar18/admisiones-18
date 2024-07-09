@@ -45,6 +45,9 @@ export class LoginComponent {
   navigateToRegister() {
     this.router.navigate(['/register']);
   }
+  navigateToHome(){
+    this.router.navigate(['/home']);
+  }
 
   onSubmit() {
     if (this.loginForm.valid) {
